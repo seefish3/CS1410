@@ -1,6 +1,6 @@
 import pygame
 
-class Sun:
+class Light:
 
     def __init__( self, x, y, radius ):
         self.mX = x

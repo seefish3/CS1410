@@ -1,11 +1,12 @@
 import pygame
 import game
 # YOU SHOULD CHANGE THIS TO IMPORT YOUR GAME MODULE
-import background
+import example
+import image
 
 # YOU SHOULD CONFIGURE THESE TO MATCH YOUR GAME
 # window title bar text
-TITLE = "EXAMPLE"
+TITLE = "Room"
 # pixels width
 WINDOW_WIDTH  = 700
 # pixels high
@@ -21,7 +22,7 @@ class PygameApp( game.Game ):
 
         # create a game instance
         # YOU SHOULD CHANGE THIS TO IMPORT YOUR GAME MODULE
-        self.mGame = example.Example( width, height )
+        self.mGame = image.Image( width, height )
         return
 
 
