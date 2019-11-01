@@ -6,36 +6,67 @@ class Ball:
         self.mX = min_x
         self.mY = min_y
         self.mSize = size
-
+        self.mDX = 0
+        self.mDY = 0
+        self.mMinX = min_x
+        self.mMaxX = max_x
+        self.mMinY = min_y
+        self.mMaxY = max_y
+        self.mLeftPaddleX = left_paddle_x
+        self.mLeftPaddleMinY = 0
+        self.mLeftPaddleMaxY = 0
+        self.mRightPaddleX = right_paddle_x
+        self.mRightPaddleMinY = 0
+        self.mRightPaddleMaxY = 0
         return
 
             #Updates the mX and mY data members, but only if the new values are within the minimum and maximum values specified by the data members.
             #If either of the new values is incorrect, do not change anything.
         def setPosition(self, x, y):
+            if x >= mMinX and x <= mMaxX and y >= mMinY and y <= mMaxY:
+                self.mX = x
+                self.mY = y
+                return True
+            else:
+                return False
 
-            return
 
             #Updates the mDX and mDY data members. Does not check the values.
         def setSpeed(self, dx, dy):
-
-            return
+            self.mDX = dx
+            self.mDY = dy
+            return True
 
             #Updates the mLeftPaddleMinY and mLeftPaddleMaxY data members, but only if the new values are within the minimum and maximum values specified by the data members.
             # Only sets the two data members if the parameters are valid. This means the minimum must not be less than mMinY and the maximum must not be more than mMaxY. Also, the minimum must be less than the maximum.
         def setLeftPaddleY(self, paddle_min_y, paddle_max_y):
+            if min_y <= paddle_min_y and max_y >= paddle_max_y:
+                self.mLeftPaddleMinY = paddle_min_y
+                self.mLeftPaddleMaxY = paddle_max_y
+                return True
+            else:
+                return False
 
             return
 
             #Updates the mRightPaddleMinY and mRightPaddleMaxY data members, but only if the new values are within the minimum and maximum values specified by the data members. See notes in setLeftPaddleY.
         def setRightPaddleY(self, paddle_min_y, paddle_max_y):
-
+            if min_y <= paddle_min_y and max_y >= paddle_max_y:
+                self.mRightPaddleMinY = paddle_min_y
+                self.mRightPaddleMaxY = paddle_max_y
+                return True
+            else:
+                return False
             return
 
             #Receives the proposed new_y value for the ball.
             #If traveling from the current y position to the new y position would not cause the ball to bounce from the top wall, then return new_y unchanged.
             #If the value would cause the ball to bounce, then reverse the sign of mDY, calculate the corrected new_y value and return the corrected value. The picture below may help.
         def checkTop(self, new_y):
-
+            if self.mY > new_y:
+                return new_y
+            else:
+                
             return
 
             #Receives the proposed new_y value for the ball. If the new y value would not cause the ball to bounce from the bottom wall, then return new_y unchanged.
