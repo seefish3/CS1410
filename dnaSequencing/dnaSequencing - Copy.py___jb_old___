@@ -1,0 +1,44 @@
+
+def fileToList(filename):
+    fil = open(filename)
+    flist = []
+    for line in fil:
+        line = line.strip('\n')
+        flist.append(line)
+    fil.close()
+    return flist
+
+
+def returnFirstString(strings):
+    return strings[0]
+
+
+def strandsAreNotEmpty(strand1, strand2):
+    return len(strand1) > 0 and len(strand2) > 0
+
+
+def strandsAreEqualLengths(strand1, strand2):
+    return len(strand1) == len(strand2)
+
+
+def candidateOverlapsTarget(target, candidate, overlap):
+    return target[len(target-overlap):] == candidate[:overlap]
+
+def findLargestOverlap(target, candidate):
+    largest = 0
+    if
+    for i in range(len(target)):
+        if candidateOverlapsTarget(target, candidate, i) == True:
+            largest = i
+
+def findBestCandidate():
+
+
+def joinTwoStrands():
+
+
+def main():
+    tarfil = input("Target strand filename: ")
+    canfil = input("Candidate strands filename: ")
+
+main()

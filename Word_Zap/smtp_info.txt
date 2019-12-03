@@ -1,5 +1,0 @@
-mta:    144.38.207.100
-user:   tester
-pass:   nitr0g@3100
-host:   mail.seefish.tech
-domain: seefish.tech
