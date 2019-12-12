@@ -1,6 +1,6 @@
 import pygame
 
-class Light:
+class Sun:
 
     def __init__( self, x, y, radius ):
         self.mX = x
@@ -10,7 +10,7 @@ class Light:
         return
 
     def evolve( self, dt ):
-        #self.mY -= 10*dt
+        self.mY -= 10*dt
         return
 
     def draw( self, surface ):

@@ -1,4 +1,4 @@
-
+import pygame
 class TV:
 
     def __init__( self, x, y, width, height, r, g, b):

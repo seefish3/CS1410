@@ -14,12 +14,10 @@ class Table:
 
         return
 
+
     def draw( self, surface ):
-        top = line(start_pos, end_pos, width)
-        leg1 = line(start_pos, end_pos, width)
-        leg2 = line(start_pos, end_pos, width)
-        pygame.draw.line( surface, self.mColor, top, 0 )
-        pygame.draw.line( surface, self.mColor, leg1, 0 )
-        pygame.draw.line( surface, self.mColor, leg2, 0 )
+        top = pygame.Rect( int ( self.x ), int ( self.x ), int ( self.mWidth ), int ( self.mHeight ) )
+        pygame.draw.rect( surface, self.mColor, rect, 0 )
+
 
         return
